@@ -15,5 +15,5 @@ test('new users can register', function () {
     ]);
 
     $this->assertAuthenticated();
-    $response->assertRedirect(route('accueil', absolute: false));
+    $response->assertRedirect(route('front.sandwich.index', absolute: false));
 });

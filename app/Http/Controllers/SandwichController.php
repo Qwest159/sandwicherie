@@ -19,7 +19,7 @@ class SandwichController extends Controller
             'sandwichs' => $sandwichs,
         ]);
     }
-
+    public function show($id) {}
     /**
      * Show the form for creating a new resource.
      */
@@ -39,10 +39,7 @@ class SandwichController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -66,5 +63,10 @@ class SandwichController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function addsandwich($id)
+    {
+        $sandwich = Sandwich::FindOrFail($id);
     }
 }
